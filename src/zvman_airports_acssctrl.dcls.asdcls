@@ -1,0 +1,7 @@
+@EndUserText.label: 'VMAN - Airports Access Control'
+@MappingRole: true
+define role ZVMAN_AIRPORTS_ACSSCTRL {
+    grant select on zvman_airports 
+    where ( country ) = aspect pfcg_auth(/dmo/trvl, /DMO/CNTRY, ACTVT = '03');
+                        
+}
